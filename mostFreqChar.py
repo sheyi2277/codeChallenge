@@ -1,3 +1,7 @@
+import os
+import psutil
+
+process = psutil.Process(os.getpid())
 def mostFreqChar(str):
 
 
@@ -25,5 +29,8 @@ def mostFreqChar(str):
 
 str = input("please enter a sentence: ")
 
-print(mostFreqChar(str)) #function call and output
+print("the most frequents character(s) : " +mostFreqChar(str)) #function call and output
+print("The memory consumption is: " )
+print(process.memory_info().rss)
+
 
