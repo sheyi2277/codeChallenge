@@ -4,7 +4,7 @@ def mostFreqChar(str):
     stats = {} # Empty Dictionary
 
 
-    for s in str:  #Loop to scan through the given string
+    for s in str:
 
         stats[s] = str.count(s)
 
@@ -16,13 +16,14 @@ def mostFreqChar(str):
 
     for key, value in itms:
 
-        if value == max_value: #
+        if value == max_value: #check if the charater in the list is the most frequent
 
-            output.add(key)
+            output.add(key) #if there are more than one most frequent character add to the list
 
-    return ''.join(output)
+    return ''.join(output) #return most frequent character
 
 
 str = input("please enter a sentence: ")
 
-print(mostFreqChar(str))
+print(mostFreqChar(str)) #function call and output
+
